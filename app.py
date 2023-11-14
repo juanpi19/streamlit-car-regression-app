@@ -496,10 +496,8 @@ def predict_car_price(manufacturer, condition, cylinders, fuel, odometer, title_
 
 
 st.title("Estimate Your Car's Price")
-"""
-Complete all the information to your left and then press "Estimate"
-"""
-
+st.caption('Update all the information on the left sidebar and then press "Estimate"')
+#st.header("", divider='gray')
 
 
 # Every form must have a submit button.
@@ -541,28 +539,42 @@ if st.button('Estimate'):
 
 '''
 
+st.divider()
 st.text("")
-st.text("")
-st.text("")
+
+
+
+# """
+# ####  | Estimate the Price of Your Car in Minutes
+#  - This ML model and User Interface were developed by **Juan Herrera**
+#     - **Code**
+#         - [Model Source Code](https://github.com/juanpi19/regression-analysis-cars-dataset/blob/main/kaggle_cars_dataset_regression_analysis.pdf)
+#         - [UI Source Code](https://github.com/juanpi19/streamlit-car-regression-app)
+
+#     - **Let's Connect!**
+#         - [Connect on LinkedIn](https://www.linkedin.com/in/juanherreras/)
+#         - [GitHub](https://github.com/juanpi19)
+#         - jjh80024@usc.edu
+# """
+
+st.subheader('About the Project')
+st.markdown('''
+
+- [ML Model Source Code](https://github.com/juanpi19/regression-analysis-cars-dataset/blob/main/kaggle_cars_dataset_regression_analysis.pdf)
+- [Streamlit App Source Code](https://github.com/juanpi19/streamlit-car-regression-app)
+''')
+
+st.markdown("**Let's Collaborate!**")
+
+st.markdown('''
+
+- [Connect on LinkedIn](https://www.linkedin.com/in/juanherreras/)
+- [GitHub](https://github.com/juanpi19)
+- jjh80024@usc.edu
+''')
+
 st.text("")
 st.text("")
 
 # Displaying Project Process Picture
 st.image(image)
-
-"""
-###  | Estimate the Price of Your Car in Minutes
- - This ML model and User Interface were developed by **Juan Herrera**
-    - **Code**
-        - [Model Source Code](https://github.com/juanpi19/regression-analysis-cars-dataset/blob/main/kaggle_cars_dataset_regression_analysis.pdf)
-        - [UI Source Code](https://github.com/juanpi19/regression-analysis-cars-dataset/blob/main/kaggle_cars_dataset_regression_analysis.pdf)
-
-    - **Let's Connect!**
-        - [Connect on LinkedIn](https://www.linkedin.com/in/juanherreras/)
-        - [GitHub](https://github.com/juanpi19)
-        - jjh80024@usc.edu
-
-###  | About the Data
- - The initial shape of the data was 426880 rows and 26 columns.
- - This data was collected from CraigList
-"""
