@@ -2,8 +2,28 @@ import streamlit as st
 import pickle
 import pandas as pd
 import numpy as np
+from datetime import datetime
 # Image Reading
 from PIL import Image
+#from streamlit_gsheets import GSheetsConnection
+#from google_analytics import GoogleAnalytics
+
+
+
+# Google Sheets Connection
+
+# Google Analytics tracking code
+google_analytics_code = """
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-528WH0B4V6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-528WH0B4V6');
+</script>
+"""
+
 
 #model = pickle.load(open('car_prediction_model_ols_v0.pkl','rb'))
 image = Image.open('project_pic.jpg')
@@ -503,6 +523,12 @@ st.caption('Update all the information on the left sidebar and then press "Estim
 # Every form must have a submit button.
 # Create a button
 if st.button('Estimate'):
+
+    # new_data_sheet = pd.DataFrame({'Date': datetime.now(), 'Estimate Button Pressed': 'Yes'}, index=[1])
+
+    # sheet.append(new_data_sheet, ignore_index=True)
+
+    # st.write(sheet)
 
      # get prediction
     result = predict_car_price(manufacturer=manufacturer_pred, 
