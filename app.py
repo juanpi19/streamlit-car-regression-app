@@ -5,24 +5,8 @@ import numpy as np
 from datetime import datetime
 # Image Reading
 from PIL import Image
-#from streamlit_gsheets import GSheetsConnection
-#from google_analytics import GoogleAnalytics
 
 
-
-# Google Sheets Connection
-
-# Google Analytics tracking code
-google_analytics_code = """
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-528WH0B4V6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-528WH0B4V6');
-</script>
-"""
 
 
 #model = pickle.load(open('car_prediction_model_ols_v0.pkl','rb'))
@@ -524,9 +508,7 @@ st.caption('Update all the information on the left sidebar and then press "Estim
 # Create a button
 if st.button('Estimate'):
 
-    # new_data_sheet = pd.DataFrame({'Date': datetime.now(), 'Estimate Button Pressed': 'Yes'}, index=[1])
 
-    # sheet.append(new_data_sheet, ignore_index=True)
 
     # st.write(sheet)
 
@@ -569,19 +551,6 @@ st.divider()
 st.text("")
 
 
-
-# """
-# ####  | Estimate the Price of Your Car in Minutes
-#  - This ML model and User Interface were developed by **Juan Herrera**
-#     - **Code**
-#         - [Model Source Code](https://github.com/juanpi19/regression-analysis-cars-dataset/blob/main/kaggle_cars_dataset_regression_analysis.pdf)
-#         - [UI Source Code](https://github.com/juanpi19/streamlit-car-regression-app)
-
-#     - **Let's Connect!**
-#         - [Connect on LinkedIn](https://www.linkedin.com/in/juanherreras/)
-#         - [GitHub](https://github.com/juanpi19)
-#         - jjh80024@usc.edu
-# """
 
 st.subheader('About the Project')
 st.markdown('''
